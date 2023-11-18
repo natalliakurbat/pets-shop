@@ -92,8 +92,8 @@ items.forEach(i => { //используем forEach для перебора об
     // помещаем ключи в соответ теги :
     myCard.querySelector('h1').textContent = i.title;
     myCard.querySelector('p').textContent = i.description;
-    myCard.querySelector('img').textContent = i.img;
-    myCard.querySelector('.price').textContent = i.price;
+    myCard.querySelector('img').src = i.img; //т.к. ссылка для изображения то пишем src
+    myCard.querySelector('.price').textContent = `${i.price}p`; //к значению нужно приписать р
     myCard.querySelector('.tags').textContent = i.tags;
 
     shopItems.append(myCard); //вставляем в конец контейнера 
